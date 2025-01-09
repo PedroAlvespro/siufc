@@ -1,0 +1,1 @@
+content based on the management theory book, dynamic classes taught by Professor Renato Furtado de Mesquita.
