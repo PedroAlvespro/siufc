@@ -1,0 +1,7 @@
+Ordem de precedência entre operadores : ~, And, Or, If.
+Essa ordem pode ser quebrada a depender dos parênteses da fórmula lógica.
+
+Subformula: Uma subfórmula de A é o próprio A, basicamente, A={A}, ou seja, a fórmula é quebrada em pequenos operadores, onde o que ela pode se tornar é uma subformula, exceto os operadores atômicos. Ex:
+A = (p V ~q) -> (r And ~q), tem por subformula : {A, p V ~q, p,q r And ~q, r}, logo toda subformula é a própria fórmula quebrada.
+o Tamanho de uma fórmula é basicamente contar os elementos da fórmula, exceto os parênteses. Logo, o tamanho da fórmula A é 9. Ex:
+| (p V ~q) -> (r And ~q) |, contando cada elemento, dá 9.

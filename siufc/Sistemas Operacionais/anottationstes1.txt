@@ -1,0 +1,48 @@
+Aula 01 SO:
+Anotações prova 01 de SO:
+
+-------------------------------------
+
+Objetivos de um SO : Executar programas do usuário de forma a ajuda-los.
+O que é um SO: Programa que sempre está em execução no computador (Kernel), intermediário entre o usuário e a máquina gerenciador de recursos computacionais - ou seja, faz o uso do hardware de forma justa dos recursos, controlador de execução dos programas pra prevenir erros e uso indevido do computador.
+Sistemas Computacionais são separado entre; 
+A) -> Usuários
+B) -> Apps
+C)-> SO
+D) -> Hardware
+
+Compostos de uma ou mais CPU´S e vários dispositivos de controle conectados através de um barramento único que provê memória compartilhada.
+
+Operações de um sistema computacional: 
+Dispositivos de IO e CPU´S podem executar concorrentemente, cada controlador de dispositivo possui um buffer local, as operações dos dispositivos de IO são executadas para o buffer local de cada controlado, e o controlador de dispositivos informa a CPU quando uma operação é finalizada através de um INTERRUPÇÃO.
+
+Funcionamento de Interrupções:
+O SO é baseado em interrupções, logo - existe uma rotina de tratamento de interrupções, onde; 
+	É preciso salvar o endereço de cada interrupção
+	A ocorrência de novas interrupções fica desabilitada enquanto outra 	interrupção está sendo executada.
+	As Chamadas de Sistemas são interrupções do software.
+
+Estrutura para Acesso Direto a Memória: Feitos por dispositivos de IO rápido com velocidade similares ao hardware do computador, processador. O Controlador de dispositivos transfere os dados do bloco de memória do buffer direto para o processador, sem passar pela CPU.
+
+Arquitetura de Sistema Computacional:
+A) -> Multiprocessador: Também conhecidos como sistemas paralelos.
+	Vantagens: 
+			Maior vazão, Economia de Escala, Maior confiabilidade.
+Clusters: Clusters são comumente utilizados para computação de alto desempenho, são como multiprocessador - porém são formados por múltiplos sistemas trabalhando juntos, que geralmente compartilhas informação por uma rede e fornece um serviço com alta disponibilidade que sobrevive a falhas.
+
+Estrutura de SO:
+Usa multiprogramação: um único usuário não mantem tudo ocupado o tempo todo. É necessário para garantir uso eficiente dos recursos. Utiliza Jobs(dados e instruções e códigos) de forma a permitir que a CPU sempre tenha algo para executar.
+Uma lista de Jobs ficam na memória, um Job é selecionado para ser executado por um escalonador de Jobs, quando o Job precisa esperar por algo, por exemplo um IO, o SO passa a executar outro Job.
+Compartilhamento de tempo: Rapida alternância da CPU entre os Jobs, se vários Jobs estão prontos para serem executados, entra em Ação o Escalonamento de CPU.
+Memória Virtual permite que um processo possa ser executado sem 
+estar totalmente carregado na memória principal.
+
+Operação de um SO:
+Interrupções geradas pelo Hardware, Traps geradas pelo Software;
+	Requisição de Serviço do sistema operacional(systems calls),
+	Divisão por 0, loop infinito, etc..
+Operação em DualMode: Usada para prevenir o uso indevido do SO, então tem 2 o Kernel e o usuário comum.
+Bit de Modo: Permite distinguir quando o sistema está executando um código do usuário ou um código do núcleo (Kernel), algumas instruções privilegiadas só podem ser executadas em modo Kernel, um system call vai pro Kernel, retorno da system call volta para o usuário.
+
+	
+

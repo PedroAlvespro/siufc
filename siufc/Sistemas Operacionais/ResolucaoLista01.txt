@@ -1,0 +1,27 @@
+ResolucaoLista01:
+--------------------------
+
+1) E.
+2) A.
+3) VERDADEIRO.
+4) B.
+5) D. 
+5i) C.
+6) A.
+
+
+
+7) Precisa da composição de um processo (System Call), ou seja - instruções, dados, bits, etc...
+8)  Nesse gerenciamento, temos funções importantes como: Controlar que partes da memória está sendo usada e quem está controlando, definir que espaços de memória serão colocados dentro ou fora, alocar e desalocar de forma justa na memória.
+9) CLI, linha de comando onde o usuário envia suas requisições para o SO, sem interface gráfica apurada, apenas comando via terminal, teclado por exemplo, ex: Bash. GUI, interface de Usuário mais amigável, contém diversas funções diferentes para o usuário, como botões do mouse com funções diferentes e princípios de interação mais amigável, ex: Calc do Windows. Batch, execução linha-a-linha que usa o conceito de lotes de execução, ex: DOS
+10) Monotarefas: programas que executam apenas um programa por vez, logo - se um programa está sendo executado, outro não pode ser executa. Sendo assim, um SO monotarefa é um SO de estrutura mais simples, que tem baixo aproveitamento de recursos, ex: DOS. Multitarefas: executa vários programas por vez, logo - um programa é executado simultaneamente a outro, através de um compartilhamento de recursos de processamento, seja tempo ou memória. Sendo assim, é mais rápido e aproveita melhor os recursos, ex: Linux, em versões Arc, Ubuntu, Apache....
+11) A.
+12) a-> transmissão de mensagens é um meio de comunicação (IPC), onde, caso p1 e p2 querem comunicar-se, o P1 send e P2 recive, por exemplo, então eles usam um meio de canal de comunicação lógico e físico, como por exemplo Rede. Logo- troca de mensagens é amplamente usando em ambientes distribuídos, podendo ser usado o buffer, sincronismo ou assincronismo. b-> memória compartilhada é um (IPC), um processo tem que concordar em ceder um espaço na memória para outra processo. Os processos que usam essa comunicação devem estar na mesma posição de memória e evitar erros, como o uso duplicado de dados.
+13) um SO crítico é aquele que tem por obediência fiel o prazo, o tempo decorrido e a pontualidade, são sistemas que não podem falhar de maneira alguma, principalmente falhas relacionadas a tempo, ex: sistema de localização aéreo - não pode errar a hora de pouso porque existe um protocolo do aeroporto para o avião pousar, usina nuclear, exige dispositivos de resfriamento, caso o SO da ventoinha principal demore para esfriar por um erro do SO, causaria um dano critico. SO Não Critico; que não tem as obrigatoriedades/urgência de responder em um determinado prazo ou tempo, no sentido de causar uma catástrofe em sua execução errada, ex: Datashow, o SO de um dispositivo de size imagem não precisa obedecer a prazo por conta de uma catástrofe esperando pelo seu erro.
+14) 3-e, 1-f, 7-i, 4-c, 5-g, 2-d, 6-b.
+15) A abordagem em camadas é uma forma de abstração do SO, cada camada faz uso de operações de camadas de níveis inferiores, o nível mais baixo da camada é o 0 e o mais alto N. Essa abordagem pode ser eficaz, devido ao alto nível de abstração do SO podendo contribuir com eficiência, porem, pode ser difícil associar camada e responsabilidade, em nível de implementação.]
+16) o Microkernel tem por função fazer o mínimo possível de passagem pelo kernel, mantendo apenas os serviçoes essenciais do SO dentro do modo kernel, e comunicar o processo diretamente com a CPU, ele fornece isso com o objetivo de oferecer mais modularidade e segurança, porem fornece desvantagens de desempenho devido as muitas trocas de contexto.
+17) Essa arquitetura fornece um melhor desempenho em distribuído e outros devido a separação de processos, a criação de um ambiente virtual isolado e execução de múltiplos SO ao mesmo tempo, projetar um SO com essa arquitetura pode fornecer um alivio no hardware e compartilhamento de processos entre hardware físico e hardware virtual.
+18) a diferença se da a uso do SO e ambientação do código fonte do SO, o hospedeiro armazena em si o SO em sua essência e por isso, consegue permissões especiais de alteração de software por exemplo. O convidado é o usuário o SO - o SO emula em sua máquina o SO real, usuário tendem a usar esse tipo de arquitetura, devido a não ter o hardware necessário para executar o SO em suas máquinas físicas.
+22) Escalonador é um hankeador de processos.
+23) Para alternar entre os processos P0 e P1, o sistema operacional utiliza o escalonador de processos, que decide qual processo deve ocupar a CPU. Quando P0 precisa aguardar (por exemplo, por E/S), o escalonador de curto prazo salva seu estado no PCB0 e seleciona P1, restaurando o estado salvo em PCB1. Esse processo é chamado de troca de contexto (context switch). Em sistemas multitarefa, essa alternância permite que ambos os processos sejam executados em momentos diferentes, mantendo a CPU sempre ocupada.

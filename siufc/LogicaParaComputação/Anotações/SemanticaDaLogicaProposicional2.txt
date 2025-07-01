@@ -1,0 +1,11 @@
+Valoração: Maneira de categorizar todas as proposições lógicas como verdadeiro ou falso, 1 e 0, respectivamente.
+
+Matriz de Conectivos, estruturas de conectivos e suas peculiaridades, Ex:
+(a SE p) ou seja;
+a = 1 -> p = 0, a resposta é 0, porém, a = 0 -> p = 1, a resposta é 1. Note que a proposição só é falsa quando a é verdadeiro e b é falso, ou seja, caso o primeiro átomo da proposição seja verdadeiro e o segundo falso, a proposição é falsa, isso tratando do ->(Se).
+(a And p) ou seja;
+A proposição A and B só são verdadeiros quando tanto A quanto B são verdadeiros.
+(a V b) ou seja;
+A proposição A V B só são verdadeiros se A ou B são verdadeiros, então só é falso quando A e B são falsos.
+
+Valoração de fórmulas complexas: Verificar se as fórmulas maiores tem valores 1 ou 2, resolvendo de forma a respeitar a ordem de precedência e os parênteses.

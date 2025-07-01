@@ -1,0 +1,72 @@
+Anotações Aula 06 e 07: 
+---------------------------
+
+Processos: é um conceito de um programa em execução que pode ser dividido em: seção de texto, contador de programa, pilha, seção de dados, heap, etc... processo é um entidade passiva, ou ativa.
+Bloco de controle de Processo: Quando um processo é suspenso temporariamente dessamaneira, ele deverá ser reiniciado mais tarde, exatamente do mesmo ponto em que estava quando foi interrompido.
+Estado de Processo: Basicamente, o processo opera através dos estados, Novo, Pronto, Em execução, Em espera, Encerrado.
+Cada processo é representado por um pcb, 
+Escalonamento de processos: Potencialmente, todos os processos são executados com as CPUs multiplexadas para eles. Ao trocar a CPU entre os processos, o SO faz o computador mais produtivo. Logo, é um meio de usar de forma eficiente a CPU.
+objetivos do escalonamento: justiça, aplicação de política, equilíbrio, vazão, tempo de resposta, proporcionalidade. Usando a multiprogramação que visa sempre ter processos em execução.
+Filas de escalonamento:  
+Fila de jobs: conjuntos de todos os processos do sistema,
+Fila de prontos: conjuntos de todos os processos prontos e aguardando 
+a execução,
+Fila de dispositivos: conjuntos de processos esperando por um I/O.
+Escalonador de longo prazo (jobs): seleciona qual processo deve ser trazido, para a fila de prontos,
+Escalonador de curto prazo (CPU): seleciona qual processo deve ser executado e aloca a CPU.
+Escalonador de médio prazo: é que algumas vezes pode ser vantajoso remover processos da memória principal e então reduzir o nível de multiprogramação. Posteriormente, o processo poderá ser reintroduzido dentro da memória e sua execução pode ser retomada do ponto aonde ela parou.
+Algoritmos de Escalonamento: Atua de acordo com os objetivos do escalonador.
+Criação de Processos: Um processo pode criar vários processos (system call) durante a execução, Processo criador: Pai; e os novos processos: Filhos. Por sua vez, cada filho pode criar outros filhos, formando uma árvore de processos. 
+
+Comunicação de processos:
+A) -> Independente: quando não afeta outros processos ou não podem ser 
+afetados (ex.: não compartilham dados),
+B) -> Cooperativos: quando podem afetar ou ser afetados por outros 
+processos.
+	vantagens do cooperativo; compartilhamento de informações, velocidade de processamento, modularidade, conveniência.
+	A cooperação demanda um mecanismo de comunicação entre processos 
+	(IPC) que permite a troca de informações. Veja abaixo tipos de IPC:
+	A) -> Memória compartilhada: estabelece uma região de memória que é 
+	compartilhada pelos processos, um processo pode guardar a memória para outro processo.
+	B) -> Transmissão de mensagens: troca de mensagens entre os processos. Amplamente utilizado em ambiente distribuído, os processos se comunicam sem usar variáveis compartilhadas, ou seja - não existe 	compartilhamento de espaço na memória, tem apenas 2 operações:
+				Send, e Recive, ambas (mensagem)
+	Se P e Q querem se comunicar, estabelecem canais de comunicação - lógico e físico, ex rede. Implementam através de sincronismo assincronismo, com buffer.
+	C) -> Memória compartilhada: Os processos devem estar em uma região de memória compartilhada. Um processo deve concordar em ceder um espaço na memória para outro, que também pode reservar um 	espaço. Devem assegurar que não ocorra gravações de maneira simultânea em uma região.
+	D) -> Produtor/Consumidor: Paradigma comum nos processos cooperativos,  processo Produtor produz informações que são consumidas por um 
+	processo Consumidor. Por exemplo, um compilador pode produzir código de montagem, que é 
+	consumido pelo montador. O montador, por sua vez, pode produzir 
+	módulos-objeto, que são consumidos pelo carregador. Uma solução é usar memoria compartilhada, é preciso um buffer de itens, sendo preenchido prelo produto e removido pelo Consumidor. Então existem 2 	tipos de Buffer:
+				 o ilimitado - não impõe limite prático ao tamanho do buffer e o
+				 limitado, assume que há um tamanho fixo para o buffer.
+	E) -> Comunicação Direta, Os processos precisam ser identificados explicitamente e os canais precisam de: estabelecimento automático, canal exclusivo para cada par.
+	F) -> Comunicação Indireta, as mensagens são enviadas e recebidas de caixas de mensagens, cada caixa tem um id único. Propriedades de canal: 
+				Estabelecimento apenas se compartilham uma caixa de mensagem,		
+				Um canal pode ser associado com vários processos,
+				Um caixa pode ser de propriedade de um processo ou do SO.
+		P1 FAZ SEND, P2 E P3 RECIVE, O SO ESCOLHE ARBITRARIAMENTE O PN RECEPTOR E O NOTIFICA.
+	G) -> Sincronização, a troca de mensagens pode ser bloqueantes(envio e recebimento com bloqueio, remetente é bloqueado até destinatário receber, destinaria é bloqueado até mensagem disponível) ou, não 	bloqueante(da certo de send e recive de todo jeito)
+	H) -> Buffer, Basicamente, toda a comunicação ocorre por meio de uma fila (canal):
+				Capacidade Nula, como não possui espaço, o canal não pode ter 
+				qualquer mensagem em espera. O remetente precisa ser bloqueado até 
+				o destinatário receber a mensagem.
+				Capacidade limitada: O remetente precisa ser bloqueado apenas enquanto a fila estiver cheia. 
+				Capacidade ilimitada: O remetente nunca é bloqueado.
+	
+	I) -> Comunicação Cliente-Servidor; por meio de Sockets, um socket é definido como um ponto final para comunicação - Concatenação de endereço IP e porta, osocket 161.25.19.8:1625 se refere a porta 	1625 na máquina 161.25.19. Logo- a Comunicação se da por pares de sockets. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

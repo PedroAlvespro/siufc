@@ -1,0 +1,19 @@
+Anotações Aula 03: 
+--------------------------
+Anotações para a prova:
+
+Ambientes de computação:
+Propriedades Cliente Servidor:
+A) -> Computação Cliente - Servidor: vários sistemas são servidores respondendo a requisições de clientes. (SGDB) é o servidor de processamento que é uma interface para o cliente,
+B) -> Servidor de Arquivos: Servidor de arquivos provê uma interface para clientes armazenar e recuperar arquivos (páginas web).
+Propriedades Peer-to-Peer:
+A) -> Cada pessoa é um nó e é considera um peer, logo não existem clientes nem servidores, todos nós podemos ser. 
+	Funciona assim: um nó deve se juntar a rede P2P, Registra seus 	serviços no serviço centralizado da rede, ou
+ 	Broadcast da requisição por serviço e responde às requisições por
+ 	serviço via protocolo de descoberta. Ou seja, uma estrela.
+Propriedades da Computação Baseada na WEB: 
+A) -> Nova categoria de dispositivos para gerenciar tráfego web entre servidores similares: balanceadores de carga.
+Propriedades da Computação em Nuvem:
+A) -> Pretende ser Global, serviço pago com transparência, terceirizado por empresas de TI
+B) -> Usuário final armazena diversos arquivos e documentos na internet.
+C) -> infraestrutura é provida como um serviço, ou seja, serviço alocado em datacenters utilizando hardwares compartilhado para computação e armazenamento, onde os usuários só precisam pagar e acessar a internet.

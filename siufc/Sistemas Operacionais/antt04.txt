@@ -1,0 +1,47 @@
+Aula 04
+------------------
+Anotações para a Prova:
+
+Estruturas de SO :
+Serviços de SO, interfaces: CLi, GUI, Batch.
+Serviços de SO, Execução de Programas : Carregar na Memória, Executar, Finalizar.
+Serviços de SO, Operações de IO: Requisitar IO.
+Serviços de SO, Manipulação do Sistemas de Arquivos: Ler e escrever arquivos e diretórios, criar e deletar, procura e listar informações, permitir permissões.
+Serviços de SO, Comunicações: Trocar infos do computador ou rede, memoria compartilhada, troca de mensagens.
+Serviços de SO, Detecção de Erro: CPU, memória e Dispositivos de IO, debugging.
+Serviços de SO, Alocação de Recursos: Usuário de Jobs executam concorrentemente, Alocar recursos para cada um.
+Serviços de SO, Contabilização: Registro de Quantidade baseado no uso dos recursos pelos usuários e tipos de recursos empregados.
+
+Interface com o Usuário: 
+CLI: CLI ou interpretador de comandos, Permite o fornecimento direto de comandos ao sistema ,Implementados no núcleo ou como programas do usuário, Shells (bash).
+A) -> recebe um comando do usuário e o executa, comandos internos do SO ou apenas nomes de programas,
+B) -> No segundo caso, adicionar nvoas funcionalidades ao sistema, requer alterações no kernel.
+GUI: Uma interface mais amigável com o usuário, Geralmente inclui mouse, teclado e monitor, Ícones representam arquivos, programas, ações, etc, Diferentes botões do mouse causam ações diferentes no objetos da 
+interface. Muitos Sistemas incluem tanto o CLI quanto o GUI.
+
+Chamadas de Sistemas: Serve para fornecer abstrações e administrar os recursos, a interface entre o so e os programas de usuário trata primeiramente como lidar com as abstrações. As SysCall são os principais recursos provedores dessa abstração.
+Propriedades:
+A) -> Escritas em Alto Nível, usam um api interna e são chamadas diretamente,
+B) -> Exemplos de SysCall, Win32 e POSIX api
+Implementação: a interface das chamadas de sistema invoca a chamada de sistema pretendida do kernel do SO o qual retorna o resultado, o chamador não precisa saber de nada sobre a implementação de chamada de sistemas, apenas obedecer a api e entender que o SO irá realizar em resposta a chamada, grande parte dos detalhes da interface do SO são escondida dos programadores pela API.
+Passando parâmetros: Simples, passa pelos registradores. Bloco, endereço do bloco é passado como parâmetro em um registrador. Pilha, empilhador/push pelo programa e removidos/desempilhados desta pelo SO.
+Tipos: Controle De Processor, Gerenciamento de arquivos, Gerenciamento de dispositivos, Manutenção da informação, Comunicação, Proteção.
+Chamadas de Sistema, Controle de Processos: A chamada fork() é um excelente exemplo: A chamada cria uma cópia idêntica do processo gerador, Após a chamada, pai e filho seguem caminhos distintos
+Chamadas de Sistema, Manipulação de Arquivos:  As chamadas read() e write() são excelentes exemplos, Chamadas que lêem ou escrevem dados em um arquivo
+
+Tipos de SO: Para cada computador existe um SO, e há três tipos de serviços: 
+A) -> processamento em batch (lote):
+	Processamento de tarefas de rotina, sem a presença interativa 
+	dos usuários do sistema
+B) -> processamento de transações:
+	Gerenciam grandes quantidades de pequenas requisições. 
+C) -> tempo compartilhado:
+	Possibilitam que múltiplos usuários remotos executem suas 
+	tarefas simultâneamente no computador
+SOs para computadores portáteis: De fato, PDAs e telefones celulares basicamente se fundiram. Quase todos eles são baseados em CPUs de 32 bits com modo protegido e executam um sistema operacional sofisticado.
+SOs embarcados: ar condicionado, micro-ondas, etc... so que controlam essas coisas.
+SOs de tempo real: os resultados produzidos estejam dentro de um período pré-estabelecido. Resultados produzidos após o deadline, mesmo que corretos, podem não representar dados reais. Possuem tempo como parâmetro fundamental e prazos rígidos.
+Tipos: 
+A)-> Sistema de tempo real crítico ,Ações precisam necessariamente acontecer em dados instantes ou períodos de tempo,
+B) -> Sistema de tempo real não crítico, scumprimento ocasional de um prazo, embora não desejável, é perfeitamente aceitável.
+

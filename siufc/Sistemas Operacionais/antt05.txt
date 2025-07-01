@@ -1,0 +1,34 @@
+Aula 05, Anotações:
+-------------------------
+Anotações prova 01:
+
+
+
+Controle de Processo Monotarefa: executa um programa por vez, Multitarefa: vários por vez.
+
+os 7 programas de Sistemas: Manipulação de Arquivos, Modificação de arquivos, aplicativos, carga e execução, Comunicação, suporte a linguagens de programação, informações de estado.
+
+Projeto e implementação de um SO: não tem regra mas precisa de um usuário e um sistema para implementar. Separação de política e mecanismo, o que será feito e como fazer, respectivamente.
+
+Estrutura de um SO simples: MS-DOS, escrito para o máximo de funcionalidades com o mínimo de memória, programa app>> programa de sistema residente>> drivers >> drivers do dispositivo(rom, etc..)
+
+Estrutura do SO: Camadas
+			camada mais baixa: 0,
+			camada mais alta: n.
+			cada camada só utilize serviços e funções de camadas de nível inferior.
+Estrutura do SO: Micronúcleo, ou microkernel, é uma arquitetura de núcleo (kernel) de um sistema operativo cujas funcionalidades são quase todas executadas fora do núcleo, em oposição a um núcleo monolítico. Os processos se comunicam com um núcleo mínimo, usando o mínimo possível o "espaço do sistema" (kernel space).
+	vantagens: fácil de estender um microkernel,
+	facilidade de portar o SO para outras arquiteturas,
+	mais seguro.
+	desvantagens: 	perda de desempenho devido a comunicação mais frequente entre o modo usuário e o modo kernel.
+Estrutura do SO: Módulos, Abordagem orientada a objetos; Cada componente chave é separado dos demais, Conversam entre si através de interfaces bem definidas, Cada um pode ser carregado no kernel apenas quando necessário. De forma geral é similar ao uso de camadas, mas mais flexível
+Estrutura de SO: Cliente Servidor, Comunicação por meio de mensagens, Processo cliente constrói uma mensagem dizendo qual serviço ele deseja 
+e a envia ao processo servidor,Processo servidor computa o serviço solicitado e envia uma resposta de 
+volta ao processo cliente. É possível executar os processos em máquinas diferentes!
+Estrutura de SO: Maquinas virtuais,  Ele 
+trata o hardware e o kernel do sistema operacional como se fossem 
+ambos hardware.  A interface de uma máquina virtual fornece uma interface idêntica ao 
+hardware. O sistema operacional hospedeiro (host) cria a ilusão de que um 
+processo tem seu próprio processador e memória
+
+
